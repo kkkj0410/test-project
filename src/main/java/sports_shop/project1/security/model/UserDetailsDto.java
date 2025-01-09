@@ -10,11 +10,12 @@ import java.util.List;
 
 public class UserDetailsDto implements ProviderUser{
 
-    UserDto userDto;
+    private final UserDto userDto;
 
     public UserDetailsDto(UserDto userDto) {
         this.userDto = userDto;
     }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

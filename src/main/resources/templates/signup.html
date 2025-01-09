@@ -7,11 +7,6 @@
 <body>
 <form method="post" th:action="@{/signup}" th:object="${userDto}">
 
-    <!-- 로그인 ID -->
-    <div>
-        <label for="loginId">Login ID:</label>
-        <input type="text" id="loginId" th:field="*{loginId}" placeholder="Enter your login ID" required />
-    </div>
 
     <!-- 이메일 -->
     <div>
@@ -25,10 +20,21 @@
         <input type="password" id="password" th:field="*{password}" placeholder="Enter your password" required />
     </div>
 
+    <!-- username -->
+    <div>
+        <label for="username">username:</label>
+        <input type="text" id="username" th:field="*{username}" placeholder="Enter your password" required />
+    </div>
+
     <!-- (선택 사항) 전화번호 -->
     <div>
         <label for="phoneNumber">Phone Number:</label>
         <input type="text" id="phoneNumber" th:field="*{phoneNumber}" placeholder="Enter your phone number (optional)" />
+    </div>
+
+    <div>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" th:field="*{birthday}" name="birthday" required>
     </div>
 
     <button type="submit">Login</button>
